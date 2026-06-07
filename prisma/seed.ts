@@ -1,4 +1,4 @@
-import { PrismaClient, Category, Difficulty } from "@prisma/client";
+import { PrismaClient, Category, Difficulty, Budget } from "@prisma/client";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 
 const connectionString = `${process.env.DATABASE_URL}`;
@@ -17,6 +17,7 @@ async function main() {
         "レトロな雰囲気の喫茶店で、静かに読書をしたり、名物のクリームソーダや硬めプリンを味わいます。おひとり様が多いので人目も気になりません。",
       category: Category.GOURMET,
       difficulty: Difficulty.EASY,
+      budget: Budget.LIGHT,
     },
   });
 
