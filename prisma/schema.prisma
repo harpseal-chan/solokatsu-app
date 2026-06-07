@@ -15,6 +15,13 @@ datasource db {
 // Enum
 // ==========================================
 
+enum Budget {
+  FREE      // 0円
+  LIGHT     // 2000円以下
+  STANDARD  // 8000円以下
+  LUXURY    // 8000円より上
+}
+
 enum Category {
   GOURMET        // グルメを堪能する
   CULTURE        // 知的好奇心を満たす
@@ -40,6 +47,7 @@ model SoloKatsu {
   description String
   category    Category 
   difficulty  Difficulty
+  budget      Budget
   createdAt   DateTime   @default(now())
   updatedAt   DateTime   @updatedAt
 }
