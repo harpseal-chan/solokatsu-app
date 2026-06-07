@@ -1,0 +1,45 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+// ==========================================
+// Enum
+// ==========================================
+
+enum Category {
+  GOURMET        // グルメを堪能する
+  CULTURE        // 知的好奇心を満たす
+  REFRESH        // 心と体を整える
+  INDOOR         // おうち時間を極める
+  ENTERTAINMENT  // 非日常を楽しむ
+}
+
+enum Difficulty {
+  EASY   // レベル1：気軽にできる
+  NORMAL // レベル2：少し緊張
+  HARD   // レベル3：勇気が必要
+}
+
+// ==========================================
+// モデル
+// ==========================================
+
+// ソロ活マスターデータ
+model SoloKatsu {
+  id          String     @id @default(cuid())
+  title       String
+  description String
+  category    Category 
+  difficulty  Difficulty
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+}
