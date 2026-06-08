@@ -1,3 +1,6 @@
 {
-  "cSpell.words": ["soloKatsu"]
+  "cSpell.words": ["soloKatsu"],
+  "[markdown]": {
+    "editor.formatOnSave": false
+  }
 }
