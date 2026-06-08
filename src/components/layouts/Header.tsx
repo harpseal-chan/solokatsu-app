@@ -8,7 +8,7 @@ export default function Header() {
           href="/"
           className="font-bold text-xl text-sk-text hover:text-sk-text/50 transition-colors duration-300"
         >
-          ソロ活紹介アプリ
+          そろなび
         </Link>
       </header>
     </div>
