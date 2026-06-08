@@ -46,6 +46,13 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  /* 本アプリの配色 https://www.happyhues.co/palettes/14 */
+  --color-sk-bg: #fffffe; /* 背景・メイン（白） */
+  --color-sk-text: #272343; /* ロゴ・見出し・ボタン文字・枠線（濃いネイビー） */
+  --color-sk-muted: #2d334a; /* 本文・少し薄いテキスト（ネイビーグレー） */
+  --color-sk-primary: #ffd803; /* メインボタン・ハイライト（イエロー） */
+  --color-sk-secondary: #e3f6f5; /* タグ・Betaバッジ（明るいミント） */
+  --color-sk-tertiary: #dbe9e4; /* ホバー時・補助（くすみセージ） */
 }
 
 :root {
