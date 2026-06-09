@@ -1,11 +1,13 @@
 import { SearchFilter } from "@/components/soloKatsu/SearchFilter";
 import SoloKatsuCard from "@/components/soloKatsu/SoloKatsuCard";
 import { getSoloKatsuList } from "@/lib/soloKatsu";
-import { SoloKatsu } from "@prisma/client";
+import { Budget, Category, Difficulty, SoloKatsu } from "@prisma/client";
 
-type SearchParams = {
-  search?: string;
-};
+export interface SearchParams {
+  category?: Category;
+  difficulty?: Difficulty;
+  budget?: Budget;
+}
 
 export default async function Home({
   searchParams,
@@ -13,10 +15,11 @@ export default async function Home({
   searchParams: Promise<SearchParams>;
 }) {
   const resolvedSearchParams = await searchParams;
-  const query = resolvedSearchParams.search || "";
-  console.log("query: ", query);
 
-  const soloKatsuList = (await getSoloKatsuList()) as SoloKatsu[];
+  const soloKatsuList = (await getSoloKatsuList(
+    resolvedSearchParams,
+  )) as SoloKatsu[];
+
   return (
     <>
       <section className="px-6 py-12 text-center max-w-3xl mx-auto">

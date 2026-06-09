@@ -1,8 +1,23 @@
 import { prisma } from "@/lib/prisma";
+import { SearchParams } from "@/app/page";
+import { Prisma } from "@prisma/client";
 
-export async function getSoloKatsuList() {
+export async function getSoloKatsuList(searchParams?: SearchParams) {
+  const whereClause: Prisma.SoloKatsuWhereInput = {};
+
+  if (searchParams?.category) {
+    whereClause.category = searchParams.category;
+  }
+  if (searchParams?.difficulty) {
+    whereClause.difficulty = searchParams.difficulty;
+  }
+  if (searchParams?.budget) {
+    whereClause.budget = searchParams.budget;
+  }
+
   try {
     const soloKatsuList = await prisma.soloKatsu.findMany({
+      where: whereClause,
       select: {
         id: true,
         title: true,
@@ -15,8 +30,7 @@ export async function getSoloKatsuList() {
     });
 
     return soloKatsuList;
-  } catch (error) {
-    console.error("Error fetching soloKatsu list:", error);
+  } catch {
     return [];
   }
 }

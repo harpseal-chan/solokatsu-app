@@ -28,13 +28,11 @@ export function SearchFilter() {
 
   const handleFilterChange = (key: string, value: string) => {
     const params = new URLSearchParams(searchParams.toString());
-
     if (value === undefined) {
       params.delete(key);
     } else {
       params.set(key, value);
     }
-
     router.push(`/?${params.toString()}`);
   };
 
@@ -72,19 +70,19 @@ export function SearchFilter() {
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectItem value="gourmet">
+                <SelectItem value="GOURMET">
                   {formatCategory(Category.GOURMET)}
                 </SelectItem>
-                <SelectItem value="culture">
+                <SelectItem value="CULTURE">
                   {formatCategory(Category.CULTURE)}
                 </SelectItem>
-                <SelectItem value="entertainment">
+                <SelectItem value="ENTERTAINMENT">
                   {formatCategory(Category.ENTERTAINMENT)}
                 </SelectItem>
-                <SelectItem value="refresh">
+                <SelectItem value="REFRESH">
                   {formatCategory(Category.REFRESH)}
                 </SelectItem>
-                <SelectItem value="indoor">
+                <SelectItem value="INDOOR">
                   {formatCategory(Category.INDOOR)}
                 </SelectItem>
               </SelectGroup>
@@ -103,9 +101,9 @@ export function SearchFilter() {
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectItem value="easy">★☆☆（初心者向け）</SelectItem>
-                <SelectItem value="normal">★★☆（ちょっと勇気）</SelectItem>
-                <SelectItem value="hard">★★★（玄人向け）</SelectItem>
+                <SelectItem value="EASY">★☆☆（初心者向け）</SelectItem>
+                <SelectItem value="NORMAL">★★☆（ちょっと勇気）</SelectItem>
+                <SelectItem value="HARD">★★★（玄人向け）</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>
@@ -122,16 +120,16 @@ export function SearchFilter() {
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectItem value="free">
+                <SelectItem value="FREE">
                   {formatBudget(Budget.FREE)}
                 </SelectItem>
-                <SelectItem value="light">
+                <SelectItem value="LIGHT">
                   {formatBudget(Budget.LIGHT)}
                 </SelectItem>
-                <SelectItem value="standard">
+                <SelectItem value="STANDARD">
                   {formatBudget(Budget.STANDARD)}
                 </SelectItem>
-                <SelectItem value="luxury">
+                <SelectItem value="LUXURY">
                   {formatBudget(Budget.LUXURY)}
                 </SelectItem>
               </SelectGroup>
