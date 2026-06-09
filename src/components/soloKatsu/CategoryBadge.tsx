@@ -5,7 +5,7 @@ const CATEGORY_MAP: Record<Category, string> = {
   GOURMET: "グルメ",
   CULTURE: "カルチャー",
   REFRESH: "リフレッシュ",
-  INDOOR: "おうち",
+  INDOOR: "インドア",
   ENTERTAINMENT: "エンターテイメント",
 };
 
