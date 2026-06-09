@@ -1,8 +1,21 @@
+import { SearchFilter } from "@/components/soloKatsu/SearchFilter";
 import SoloKatsuCard from "@/components/soloKatsu/SoloKatsuCard";
 import { getSoloKatsuList } from "@/lib/soloKatsu";
 import { SoloKatsu } from "@prisma/client";
 
-export default async function Home() {
+type SearchParams = {
+  search?: string;
+};
+
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<SearchParams>;
+}) {
+  const resolvedSearchParams = await searchParams;
+  const query = resolvedSearchParams.search || "";
+  console.log("query: ", query);
+
   const soloKatsuList = (await getSoloKatsuList()) as SoloKatsu[];
   return (
     <>
@@ -16,6 +29,7 @@ export default async function Home() {
           自由に楽しむためのソロ活紹介アプリです。
         </p>
       </section>
+      <SearchFilter />
       <section className="container mx-auto px-4 py-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {soloKatsuList.map((soloKatsu) => (
