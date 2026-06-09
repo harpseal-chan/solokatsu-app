@@ -19,6 +19,7 @@ export default async function Home({
   const soloKatsuList = (await getSoloKatsuList(
     resolvedSearchParams,
   )) as SoloKatsu[];
+  const count = soloKatsuList.length;
 
   return (
     <>
@@ -33,13 +34,31 @@ export default async function Home({
         </p>
       </section>
       <SearchFilter />
-      <section className="container mx-auto px-4 py-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {soloKatsuList.map((soloKatsu) => (
-            <SoloKatsuCard key={soloKatsu.id} soloKatsu={soloKatsu} />
-          ))}
+      {count === 0 ? (
+        <div className="text-center py-16">
+          <p className="text-sm font-semibold text-sk-text mb-2">
+            該当するソロ活が見つかりませんでした
+          </p>
+          <p className="text-xs text-sk-muted">
+            条件を少しゆるめて探してみてください
+          </p>
         </div>
-      </section>
+      ) : (
+        <section className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between mb-4 px-1">
+            <p className="text-sm text-sk-muted font-medium">
+              該当するソロ活:{" "}
+              <span className="text-base font-bold text-sk-text">{count}</span>{" "}
+              件
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {soloKatsuList.map((soloKatsu) => (
+              <SoloKatsuCard key={soloKatsu.id} soloKatsu={soloKatsu} />
+            ))}
+          </div>
+        </section>
+      )}
     </>
   );
 }
