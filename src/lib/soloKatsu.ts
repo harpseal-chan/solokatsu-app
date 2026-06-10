@@ -25,6 +25,7 @@ export async function getSoloKatsuList(searchParams?: SearchParams) {
         category: true,
         difficulty: true,
         budget: true,
+        imageUrl: true,
       },
       orderBy: { createdAt: "desc" },
     });

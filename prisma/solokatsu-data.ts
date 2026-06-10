@@ -8,6 +8,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.GOURMET,
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
+    imageUrl: "/images/junkissa.webp",
   },
   {
     title: "陶芸体験",
