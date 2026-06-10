@@ -47,6 +47,7 @@ export async function getSoloKatsuDetail(id: string) {
         category: true,
         difficulty: true,
         budget: true,
+        imageUrl: true,
       },
     });
 
