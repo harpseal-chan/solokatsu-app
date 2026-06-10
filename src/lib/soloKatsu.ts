@@ -34,3 +34,23 @@ export async function getSoloKatsuList(searchParams?: SearchParams) {
     return [];
   }
 }
+
+export async function getSoloKatsuDetail(id: string) {
+  try {
+    const soloKatsu = await prisma.soloKatsu.findUnique({
+      where: { id },
+      select: {
+        id: true,
+        title: true,
+        description: true,
+        category: true,
+        difficulty: true,
+        budget: true,
+      },
+    });
+
+    return soloKatsu;
+  } catch {
+    return [];
+  }
+}
