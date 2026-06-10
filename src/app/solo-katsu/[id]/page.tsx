@@ -5,6 +5,7 @@ import { formatBudget } from "@/utils/soloKatsu";
 import { SoloKatsu } from "@prisma/client";
 import { ArrowLeft, Flame, Wallet } from "lucide-react";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 type Params = {
   params: Promise<{ id: string }>;
@@ -13,6 +14,9 @@ type Params = {
 export default async function SoloKatsuDetailPage({ params }: Params) {
   const { id } = await params;
   const soloKatsu = (await getSoloKatsuDetail(id)) as SoloKatsu;
+  if (!soloKatsu) {
+    notFound();
+  }
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8 text-sk-text">
