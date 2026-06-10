@@ -47,8 +47,10 @@ export default async function Home({
         <section className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between mb-4 px-1">
             <p className="text-sm text-sk-muted font-medium">
-              該当するソロ活:{" "}
-              <span className="text-base font-bold text-sk-muted">{count}</span>{" "}
+              該当するソロ活:
+              <span className="text-base font-bold text-sk-muted">
+                {" " + count + " "}
+              </span>
               件
             </p>
           </div>

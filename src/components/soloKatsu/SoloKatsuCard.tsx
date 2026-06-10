@@ -4,12 +4,25 @@ import CategoryBadge from "@/components/soloKatsu/CategoryBadge";
 import { DifficultyStars } from "@/components/soloKatsu/DifficultyStars";
 import { BudgetDisplay } from "./BudgetDisplay";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function SoloKatsuCard({ soloKatsu }: { soloKatsu: SoloKatsu }) {
   return (
-    <Card className="hover:shadow-lg transition-shadow bg-sk-bg">
+    <Card className="hover:shadow-lg transition-shadow bg-sk-bg pt-0">
       <Link href={`/solo-katsu/${soloKatsu.id}`}>
-        <CardHeader className="flex flex-col gap-3">
+        {soloKatsu.imageUrl && (
+          <div className="relative w-full h-48">
+            <Image
+              src={soloKatsu.imageUrl}
+              alt={soloKatsu.title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="rounded-t-md object-cover"
+              priority
+            />
+          </div>
+        )}
+        <CardHeader className="flex flex-col gap-3 mt-4">
           <div className="flex items-center justify-between w-full">
             {/* カテゴリー */}
             <CategoryBadge category={soloKatsu.category} />
