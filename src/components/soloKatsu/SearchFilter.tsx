@@ -81,7 +81,7 @@ export function SearchFilter() {
   return (
     <div className="w-full max-w-4xl mx-auto mb-8 px-4">
       <div className="flex items-center mb-3 px-1 gap-2">
-        <h2 className="text-sm font-bold text-sk-text/80 flex items-center gap-2">
+        <h2 className="text-sm font-bold text-sk-text flex items-center gap-2">
           条件で探す
         </h2>
         {hasActiveFilters && (

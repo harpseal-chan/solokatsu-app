@@ -48,7 +48,7 @@ export default async function Home({
           <div className="flex items-center justify-between mb-4 px-1">
             <p className="text-sm text-sk-muted font-medium">
               該当するソロ活:{" "}
-              <span className="text-base font-bold text-sk-text">{count}</span>{" "}
+              <span className="text-base font-bold text-sk-muted">{count}</span>{" "}
               件
             </p>
           </div>

@@ -10,25 +10,35 @@ const DIFFICULTY_MAP: Record<Difficulty, number> = {
   HARD: 3,
 };
 
-export function DifficultyStars({ difficulty }: { difficulty: Difficulty }) {
+const SIZE_MAP = {
+  sm: "w-3.5 h-3.5",
+  md: "w-4 h-4",
+} as const;
+
+type DifficultyStarsProps = {
+  difficulty: Difficulty;
+  size?: keyof typeof SIZE_MAP;
+};
+
+export function DifficultyStars({
+  difficulty,
+  size = "sm",
+}: DifficultyStarsProps) {
   const starCount = DIFFICULTY_MAP[difficulty];
+  const sizeClass = SIZE_MAP[size];
 
   return (
-    <div className="text-xs font-semibold flex items-center justify-between pt-1">
-      <div className="flex items-center gap-1">
-        <span className="text-sk-text/50 font-medium">難易度:</span>
-        {/* 常に3つの星をループさせ、starCountの数だけ色を塗る */}
-        {[...Array(3)].map((_, index) => (
-          <Star
-            key={index}
-            className={`w-3.5 h-3.5 ${
-              index < starCount
-                ? "fill-sk-primary text-sk-primary"
-                : "text-sk-muted/20"
-            }`}
-          />
-        ))}
-      </div>
+    <div className="flex items-center justify-center gap-1">
+      {[...Array(3)].map((_, index) => (
+        <Star
+          key={index}
+          className={`${sizeClass} ${
+            index < starCount
+              ? "fill-sk-primary text-sk-primary"
+              : "text-sk-muted/20"
+          }`}
+        />
+      ))}
     </div>
   );
 }
