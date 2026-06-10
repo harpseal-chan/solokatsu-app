@@ -1,20 +1,6 @@
 import { Category } from "@prisma/client";
 import { Badge } from "@/components/ui/badge";
-
-const CATEGORY_MAP: Record<Category, string> = {
-  GOURMET: "グルメ",
-  CULTURE: "カルチャー",
-  REFRESH: "リフレッシュ",
-  INDOOR: "インドア",
-  ENTERTAINMENT: "エンターテイメント",
-};
-
-/**
- * カテゴリEnumを分かりやすい日本語に変換する関数
- */
-export function formatCategory(category: Category): string {
-  return CATEGORY_MAP[category] || category;
-}
+import { formatCategory } from "@/utils/soloKatsu";
 
 export default function CategoryBadge({ category }: { category: Category }) {
   return (
