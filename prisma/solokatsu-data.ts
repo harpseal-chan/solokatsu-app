@@ -16,6 +16,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.CULTURE,
     difficulty: Difficulty.NORMAL,
     budget: Budget.STANDARD,
+    imageUrl: "/images/tougei.webp",
   },
   {
     title: "動物カフェ",
@@ -24,6 +25,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.ENTERTAINMENT,
     difficulty: Difficulty.NORMAL,
     budget: Budget.STANDARD,
+    imageUrl: "/images/animal_cafe2.webp",
   },
   {
     title: "季節の植物を楽しむ",
@@ -31,6 +33,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.REFRESH,
     difficulty: Difficulty.EASY,
     budget: Budget.FREE,
+    imageUrl: "/images/flower.webp",
   },
   {
     title: "断捨離",
@@ -38,6 +41,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.INDOOR,
     difficulty: Difficulty.EASY,
     budget: Budget.FREE,
+    imageUrl: "/images/clothes2.webp",
   },
   {
     title: "世界料理巡り",
@@ -45,6 +49,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.GOURMET,
     difficulty: Difficulty.EASY,
     budget: Budget.STANDARD,
+    imageUrl: "/images/ethnic.webp",
   },
   {
     title: "図書館",
@@ -53,13 +58,15 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.CULTURE,
     difficulty: Difficulty.EASY,
     budget: Budget.FREE,
+    imageUrl: "/images/library.webp",
   },
   {
     title: "聖地巡礼",
-    description: "アニメや小説の舞台となった場所を訪問する",
+    description: "アニメや映画など、舞台となった場所を訪問する",
     category: Category.ENTERTAINMENT,
     difficulty: Difficulty.EASY,
     budget: Budget.LUXURY,
+    imageUrl: "/images/tokai_on_air.webp",
   },
   {
     title: "エステ",
@@ -82,6 +89,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.GOURMET,
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
+    imageUrl: "/images/ramen.webp",
   },
   {
     title: "映画館",
@@ -96,6 +104,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.CULTURE,
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
+    imageUrl: "/images/art_museum3.webp",
   },
   {
     title: "ピクニック",
@@ -110,6 +119,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.INDOOR,
     difficulty: Difficulty.NORMAL,
     budget: Budget.LIGHT,
+    imageUrl: "/images/shiso.webp",
   },
   {
     title: "もんじゃ",
@@ -117,6 +127,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.GOURMET,
     difficulty: Difficulty.NORMAL,
     budget: Budget.STANDARD,
+    imageUrl: "/images/monja.webp",
   },
   {
     title: "コンサート鑑賞",
@@ -124,6 +135,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.ENTERTAINMENT,
     difficulty: Difficulty.NORMAL,
     budget: Budget.LUXURY,
+    imageUrl: "/images/concert.webp",
   },
   {
     title: "料理教室",
@@ -140,6 +152,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.REFRESH,
     difficulty: Difficulty.EASY,
     budget: Budget.FREE,
+    imageUrl: "/images/walking.webp",
   },
   {
     title: "ネットサーフィン",
@@ -155,6 +168,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.GOURMET,
     difficulty: Difficulty.EASY,
     budget: Budget.STANDARD,
+    imageUrl: "/images/fruit_parlor.webp",
   },
   {
     title: "ランプ作り体験",
@@ -163,6 +177,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.CULTURE,
     difficulty: Difficulty.NORMAL,
     budget: Budget.LUXURY,
+    imageUrl: "/images/lamp.webp",
   },
   {
     title: "乗馬体験",
@@ -170,6 +185,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.ENTERTAINMENT,
     difficulty: Difficulty.NORMAL,
     budget: Budget.STANDARD,
+    imageUrl: "/images/horse.webp",
   },
   {
     title: "プラネタリウム",
@@ -185,6 +201,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.INDOOR,
     difficulty: Difficulty.EASY,
     budget: Budget.FREE,
+    imageUrl: "/images/accessory.webp",
   },
   {
     title: "サイゼリヤ",
@@ -208,6 +225,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.REFRESH,
     difficulty: Difficulty.NORMAL,
     budget: Budget.STANDARD,
+    imageUrl: "/images/station.webp",
   },
   {
     title: "サービスエリア",
@@ -216,6 +234,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.ENTERTAINMENT,
     difficulty: Difficulty.NORMAL,
     budget: Budget.STANDARD,
+    imageUrl: "/images/sa.webp",
   },
   {
     title: "ホットケーキミックスで簡単スイーツ",
@@ -224,6 +243,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.INDOOR,
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
+    imageUrl: "/images/cake.webp",
   },
   {
     title: "回転寿司",
@@ -232,6 +252,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.GOURMET,
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
+    imageUrl: "/images/sushi.webp",
   },
   {
     title: "裁判傍聴",
@@ -248,6 +269,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.ENTERTAINMENT,
     difficulty: Difficulty.HARD,
     budget: Budget.STANDARD,
+    imageUrl: "/images/river.webp",
   },
   {
     title: "シーシャバー",
@@ -256,6 +278,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.REFRESH,
     difficulty: Difficulty.NORMAL,
     budget: Budget.STANDARD,
+    imageUrl: "/images/shisha.webp",
   },
   {
     title: "部屋の模様替え",
@@ -271,6 +294,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.GOURMET,
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
+    imageUrl: "/images/tea.webp",
   },
   {
     title: "パーソナルカラー/骨格診断",
@@ -279,14 +303,16 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.CULTURE,
     difficulty: Difficulty.NORMAL,
     budget: Budget.LUXURY,
+    imageUrl: "/images/personal_color.webp",
   },
   {
-    title: "釣り堀",
+    title: "金魚釣り堀",
     description:
-      "水面をぼんやり眺めながら魚を待つ、のんびりとした時間の流れに癒やされる",
+      "水面をぼんやり眺めながら金魚が釣れるのを待つ、のんびりとした時間の流れに癒やされる",
     category: Category.ENTERTAINMENT,
     difficulty: Difficulty.NORMAL,
     budget: Budget.LIGHT,
+    imageUrl: "/images/fishing.webp",
   },
   {
     title: "会話禁止カフェ",
@@ -295,6 +321,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.REFRESH,
     difficulty: Difficulty.NORMAL,
     budget: Budget.LIGHT,
+    imageUrl: "/images/book_cafe.webp",
   },
   {
     title: "資格の勉強",
@@ -308,9 +335,10 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     title: "夜パフェ",
     description:
       "一日の終わりに甘い贅沢を。ちょっとした罪悪感さえも愛おしくなる、自分への最高のご褒美",
-    category: Category.INDOOR,
+    category: Category.GOURMET,
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
+    imageUrl: "/images/parfait2.webp",
   },
   {
     title: "パン作り体験",
@@ -319,6 +347,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.ENTERTAINMENT,
     difficulty: Difficulty.NORMAL,
     budget: Budget.STANDARD,
+    imageUrl: "/images/bread.webp",
   },
   {
     title: "個室サウナ",
@@ -335,6 +364,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.INDOOR,
     difficulty: Difficulty.EASY,
     budget: Budget.FREE,
+    imageUrl: "/images/notebook.webp",
   },
   {
     title: "物産展巡り",
@@ -351,6 +381,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.CULTURE,
     difficulty: Difficulty.HARD,
     budget: Budget.FREE,
+    imageUrl: "/images/mint.webp",
   },
   {
     title: "海外旅行",
@@ -359,6 +390,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.ENTERTAINMENT,
     difficulty: Difficulty.HARD,
     budget: Budget.LUXURY,
+    imageUrl: "/images/taiwan.webp",
   },
   {
     title: "地元の銭湯",
@@ -390,6 +422,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.CULTURE,
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
+    imageUrl: "/images/book_store.webp",
   },
   {
     title: "動物園",
@@ -398,6 +431,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.ENTERTAINMENT,
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
+    imageUrl: "/images/zoo2.webp",
   },
   {
     title: "ホットヨガ体験",
@@ -429,6 +463,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.GOURMET,
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
+    imageUrl: "/images/chocolate_mint.webp",
   },
   {
     title: "同人誌即売会",
@@ -437,6 +472,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.CULTURE,
     difficulty: Difficulty.NORMAL,
     budget: Budget.STANDARD,
+    imageUrl: "/images/bigsight.webp",
   },
   {
     title: "はとバス",
@@ -468,6 +504,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.ENTERTAINMENT,
     difficulty: Difficulty.NORMAL,
     budget: Budget.STANDARD,
+    imageUrl: "/images/kirby_cafe.webp",
   },
   {
     title: "餃子の王将",
@@ -483,6 +520,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.INDOOR,
     difficulty: Difficulty.NORMAL,
     budget: Budget.STANDARD,
+    imageUrl: "/images/wreath.webp",
   },
   {
     title: "骨董市",
@@ -499,6 +537,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.REFRESH,
     difficulty: Difficulty.NORMAL,
     budget: Budget.FREE,
+    imageUrl: "/images/beach.webp",
   },
   {
     title: "コーディネート研究",
@@ -523,6 +562,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.GOURMET,
     difficulty: Difficulty.NORMAL,
     budget: Budget.STANDARD,
+    imageUrl: "/images/chinatown2.webp",
   },
   {
     title: "自宅で筋トレ",
@@ -539,6 +579,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.REFRESH,
     difficulty: Difficulty.EASY,
     budget: Budget.STANDARD,
+    imageUrl: "/images/spa.webp",
   },
   {
     title: "スパイスカレー",
@@ -547,6 +588,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.GOURMET,
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
+    imageUrl: "/images/curry.webp",
   },
   {
     title: "ワイナリー見学",
@@ -555,6 +597,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.CULTURE,
     difficulty: Difficulty.NORMAL,
     budget: Budget.STANDARD,
+    imageUrl: "/images/winery.webp",
   },
   {
     title: "日帰り旅行",
@@ -587,6 +630,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.INDOOR,
     difficulty: Difficulty.NORMAL,
     budget: Budget.LIGHT,
+    imageUrl: "/images/brooch.webp",
   },
   {
     title: "お菓子の工場直売所",
@@ -603,6 +647,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.ENTERTAINMENT,
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
+    imageUrl: "/images/tower2.webp",
   },
   {
     title: "ニードルフェルト",
@@ -611,6 +656,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.INDOOR,
     difficulty: Difficulty.NORMAL,
     budget: Budget.LIGHT,
+    imageUrl: "/images/purin.webp",
   },
   {
     title: "生成AIの活用",
@@ -635,6 +681,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.INDOOR,
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
+    imageUrl: "/images/dagashi.webp",
   },
   {
     title: "3DCG制作",
@@ -643,6 +690,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.INDOOR,
     difficulty: Difficulty.NORMAL,
     budget: Budget.FREE,
+    imageUrl: "/images/3dcg.webp",
   },
   {
     title: "お菓子の家づくり",
@@ -651,6 +699,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.INDOOR,
     difficulty: Difficulty.NORMAL,
     budget: Budget.LIGHT,
+    imageUrl: "/images/okashi_house.webp",
   },
   {
     title: "カルディでプチ贅沢",
@@ -675,5 +724,96 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.ENTERTAINMENT,
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
+    imageUrl: "/images/botanical_garden.webp",
+  },
+  {
+    title: "中国料理店",
+    description:
+      "贅沢な中華のコースをひと皿ずつ100%の集中力でじっくりと味わい尽くす",
+    category: Category.GOURMET,
+    difficulty: Difficulty.HARD,
+    budget: Budget.LUXURY,
+    imageUrl: "/images/chinese_cuisine.webp",
+  },
+  {
+    title: "寝台特急",
+    description:
+      "明かりを落とした秘密基地のような個室の大きな窓から、どこまでも続く夜の街並みを独り占め",
+    category: Category.ENTERTAINMENT,
+    difficulty: Difficulty.HARD,
+    budget: Budget.LUXURY,
+    imageUrl: "/images/sunrise.webp",
+  },
+  {
+    title: "レトロ建築見学",
+    description:
+      "どこか懐かしくて美しいノスタルジックな建物で、お気に入りのアングルでカメラを構える",
+    category: Category.CULTURE,
+    difficulty: Difficulty.EASY,
+    budget: Budget.FREE,
+    imageUrl: "/images/cabaret.webp",
+  },
+  {
+    title: "豪華な朝ごはん",
+    description:
+      "いつもより少し早起きして、お洒落な洋食モーニングや心に染みる和食の朝御膳を食べに出かける",
+    category: Category.GOURMET,
+    difficulty: Difficulty.EASY,
+    budget: Budget.LIGHT,
+    imageUrl: "/images/breakfast.webp",
+  },
+  {
+    title: "参議院見学",
+    description:
+      "普段は立ち入れない特別な場所へと一歩足を踏み入れ、ガイドの説明に耳を傾けながら知識を深めていく",
+    category: Category.CULTURE,
+    difficulty: Difficulty.NORMAL,
+    budget: Budget.FREE,
+    imageUrl: "/images/sangiin.webp",
+  },
+  {
+    title: "ガラス館見学",
+    description:
+      "光を浴びてキラキラと輝く繊細なガラス細工や美しいグラスを観察。帰りにショップでお気に入りの商品を購入",
+    category: Category.CULTURE,
+    difficulty: Difficulty.EASY,
+    budget: Budget.LIGHT,
+    imageUrl: "/images/glasskan.webp",
+  },
+  {
+    title: "出前パーティ",
+    description:
+      "家から一歩も出ずに食べたいものをスマホで注文 頼みすぎて余っても明日のご飯に回せる",
+    category: Category.INDOOR,
+    difficulty: Difficulty.EASY,
+    budget: Budget.STANDARD,
+    imageUrl: "/images/demae.webp",
+  },
+  {
+    title: "温泉宿",
+    description:
+      "いつも頑張っている自分にたまにはご褒美を 深夜の星空や朝もやの景色を眺めながら露天風呂にゆっくり浸かる",
+    category: Category.REFRESH,
+    difficulty: Difficulty.NORMAL,
+    budget: Budget.LUXURY,
+    imageUrl: "/images/onsen.webp",
+  },
+  {
+    title: "ビアホール",
+    description:
+      "こだわりのクラフトビールやおつまみをマイペースに堪能、休日の昼飲みから仕事帰りのサクッと1杯まで気分に合わせて自由に使える",
+    category: Category.GOURMET,
+    difficulty: Difficulty.NORMAL,
+    budget: Budget.STANDARD,
+    imageUrl: "/images/beer_hall.webp",
+  },
+  {
+    title: "バレンタイン",
+    description:
+      "自分へのプレゼントに限定スイーツや可愛いパッケージのチョコレートを買う",
+    category: Category.GOURMET,
+    difficulty: Difficulty.EASY,
+    budget: Budget.STANDARD,
+    imageUrl: "/images/chocolate.webp",
   },
 ];

@@ -4,7 +4,7 @@ import { Budget, Category, Difficulty } from "@prisma/client";
  * カテゴリーのラベル/説明リスト
  */
 export const CATEGORY_ITEMS = [
-  { category: Category.GOURMET, label: "グルメ", desc: "グルメを堪能する" },
+  { category: Category.GOURMET, label: "グルメ", desc: "外食で絶品を堪能" },
   {
     category: Category.CULTURE,
     label: "カルチャー",
