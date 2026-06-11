@@ -48,6 +48,7 @@ model SoloKatsu {
   category    Category 
   difficulty  Difficulty
   budget      Budget
+  imageUrl    String?
   createdAt   DateTime   @default(now())
   updatedAt   DateTime   @updatedAt
 }
