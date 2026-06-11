@@ -16,10 +16,6 @@ export default function NotFound() {
         ページが見つかりませんでした
       </h1>
 
-      <p className="text-sm sm:text-base text-sk-muted max-w-sm mb-8 leading-relaxed">
-        お探しのソロ活は、別の場所に移動したか、URLが間違っている可能性があります。
-      </p>
-
       <Button
         asChild
         className="rounded-full font-semibold shadow-sm group bg-sk-secondary text-sk-text transition-all hover:bg-sk-secondary hover:brightness-95 border-sk-secondary"
