@@ -10,7 +10,7 @@ export default function SoloKatsuCard({ soloKatsu }: { soloKatsu: SoloKatsu }) {
   return (
     <Card className="hover:shadow-lg transition-shadow bg-sk-bg pt-0">
       <Link href={`/solo-katsu/${soloKatsu.id}`}>
-        {soloKatsu.imageUrl && (
+        {soloKatsu.imageUrl ? (
           <div className="relative w-full h-48">
             <Image
               src={soloKatsu.imageUrl}
@@ -21,6 +21,8 @@ export default function SoloKatsuCard({ soloKatsu }: { soloKatsu: SoloKatsu }) {
               priority
             />
           </div>
+        ) : (
+          <div className="w-full h-48 rounded-t-md bg-linear-to-br from-sk-secondary to-sk-bg flex items-center justify-center"></div>
         )}
         <CardHeader className="flex flex-col gap-3 mt-4">
           <div className="flex items-center justify-between w-full">

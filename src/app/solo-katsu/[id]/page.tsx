@@ -33,17 +33,19 @@ export default async function SoloKatsuDetailPage({ params }: Params) {
 
       <article className="bg-sk-bg border border-sk-text/10 rounded-3xl shadow-sm">
         {/* 画像 */}
-        {soloKatsu.imageUrl && (
+        {soloKatsu.imageUrl ? (
           <div className="relative w-full h-56 lg:h-80">
             <Image
               src={soloKatsu.imageUrl}
               alt={soloKatsu.title}
               fill
               sizes="(max-width: 1024px) 100vw, 1024px"
-              className="rounded-t-md object-cover"
+              className="rounded-t-3xl object-cover"
               priority
             />
           </div>
+        ) : (
+          <div className="w-full h-56 lg:h-80 rounded-t-3xl bg-linear-to-br from-sk-secondary to-sk-bg flex items-center justify-center"></div>
         )}
 
         <div className="pb-6 px-6 sm:pb-8 sm:px-8 mt-6">
