@@ -4,6 +4,7 @@ import { getSoloKatsuDetail } from "@/lib/soloKatsu";
 import { formatBudget } from "@/utils/soloKatsu";
 import { SoloKatsu } from "@prisma/client";
 import { ArrowLeft, Flame, Wallet, Sparkle } from "lucide-react";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -11,6 +12,18 @@ import { notFound } from "next/navigation";
 type Params = {
   params: Promise<{ id: string }>;
 };
+
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const { id } = await params;
+  const soloKatsu = (await getSoloKatsuDetail(id)) as SoloKatsu;
+  if (!soloKatsu) {
+    return { title: "ページが見つかりません" };
+  }
+
+  return {
+    title: soloKatsu.title,
+  };
+}
 
 export default async function SoloKatsuDetailPage({ params }: Params) {
   const { id } = await params;
