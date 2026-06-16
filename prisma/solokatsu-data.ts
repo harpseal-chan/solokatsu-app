@@ -9,6 +9,12 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
     imageUrl: "/images/junkissa.webp",
+    impressions:
+      "革張りのソファに身を委ねて、珈琲の香りが漂うレトロな空間で読書をしたりアンティークな雑貨を眺めて過ごしています。私のお気に入りは、純喫茶ならではのスイーツを味わうこと。特に、昔ながらの硬めのプリンと鮮やかなクリームソーダの甘い組み合わせは心がときめきます。",
+    tips: `
+- 現金支払いのみのお店が多いので、事前に現金を準備しておくと安心。
+- 店内は喫煙可能な場合もあるので、煙が気になる方は口コミ等で確認しておきましょう。
+    `.trim(),
   },
   {
     title: "陶芸体験",
@@ -17,15 +23,29 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     difficulty: Difficulty.NORMAL,
     budget: Budget.STANDARD,
     imageUrl: "/images/tougei.webp",
+    impressions: `目の前の土の感触と成形に意識を集中させるため、自然とデジタルデトックスになります。
+難しい箇所は専門スタッフが丁寧に手伝ってくれるコースを選べば、初心者でも安心して参加できます。
+焼き上がった器は後日自宅に届き、食卓に並ぶたびに愛着が湧いてきます`,
+    tips: `
+- 粘土を触るため、汚れてもいい服装で行くか、エプロンを持参しましょう。
+- 土をこねる際に邪魔になるため、爪は事前に短く切っておくのがおすすめです。
+    `.trim(),
   },
   {
     title: "動物カフェ",
     description:
       "猫やうさぎなど、様々な動物たちと間近で触れ合える癒やしのスポット",
     category: Category.ENTERTAINMENT,
-    difficulty: Difficulty.NORMAL,
+    difficulty: Difficulty.EASY,
     budget: Budget.STANDARD,
     imageUrl: "/images/animal_cafe2.webp",
+    impressions: `私は動物が好きで、猫・フクロウ・ハリネズミなど色んな動物カフェに行きました。
+普段はなかなか出会えない珍しい動物たちとも触れ合うことができてとても癒やされます。
+周囲の人たちも目の前の動物に夢中なので、一人で来ても目立ちません。`,
+    tips: `
+- 動物は嗅覚が敏感なので、匂いの強い香水や柔軟剤は使用せずに来店しましょう。
+- 服に毛やよだれが付く場合があるため、汚れても良く、引っかかりにくい素材の服を選ぶのがおすすめです。
+    `.trim(),
   },
   {
     title: "季節の植物を楽しむ",
@@ -50,6 +70,12 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     difficulty: Difficulty.EASY,
     budget: Budget.STANDARD,
     imageUrl: "/images/ethnic.webp",
+    impressions: `国内にいながら異国情緒を感じ、手軽に世界の料理を味わうことができます。
+初心者は、店舗数が多くて入りやすいインドカレーなどの身近なジャンルから始めていって、慣れてきたらより本格的で珍しい国のお店に挑戦してみるのもおすすめです。
+その国の食文化に触れることで、何が主食なのか、どんなスパイスが使われているのかなども学ぶことができ、まるで旅をしているような知的好奇心も満たされます。`,
+    tips: `
+- メニュー名だけではどんな料理か想像しにくい場合もあるので、事前にSNSやグルメサイトでレビューをチェックしておくと注文しやすいです。
+    `.trim(),
   },
   {
     title: "図書館",
@@ -82,6 +108,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.INDOOR,
     difficulty: Difficulty.NORMAL,
     budget: Budget.FREE,
+    imageUrl: "/images/programming.webp",
   },
   {
     title: "ラーメン屋",
@@ -90,6 +117,9 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
     imageUrl: "/images/ramen.webp",
+    impressions: `ソロ活の定番スポットで、カウンター席中心のお店が多いのでおひとり様にもやさしいです。
+お店ごとに具材やスープに特色があり、こだわりを感じる一杯をじっくりと味わいます。
+写真は個人的おすすめのラーメンで、「卍力（まんりき）」の「スパイス・ラー麺」です。複雑なスパイスや酸味の効いたスープ、清涼感のあるパクチーの香り、ほろほろのチャーシューが絶品で、また食べたくなる中毒性のある味です。`,
   },
   {
     title: "映画館",
@@ -105,6 +135,13 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
     imageUrl: "/images/art_museum3.webp",
+    impressions: `誰かと一緒だと相手のペースを気にしてしまいますが、ソロだとマイペースで鑑賞できるのが魅力です。
+    一つの作品を納得いくまでじっくり眺めてもよし、興味のないエリアをスキップしてもよし。
+    自分の感性だけに集中してアートと向き合う特別な時間を過ごせます。`,
+    tips: `
+- 館内は歩いたり立って鑑賞する時間が長いため、足音が響きにくい履き慣れた靴で行きましょう。
+- コートや大きな荷物は館内のコインロッカーに預けて、身軽な状態で鑑賞するのがおすすめです。
+    `.trim(),
   },
   {
     title: "ピクニック",
@@ -115,19 +152,31 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
   },
   {
     title: "家庭菜園",
-    description: "自宅の庭やベランダで野菜やハーブを育てて、収穫の喜びを味わう",
+    description: "自宅のベランダで野菜やハーブを育てて、収穫の喜びを味わう",
     category: Category.INDOOR,
     difficulty: Difficulty.NORMAL,
     budget: Budget.LIGHT,
     imageUrl: "/images/shiso.webp",
+    impressions: `薬味が好きなので、春からシソの水耕栽培を始めました。
+種を植えて数ヶ月が経ち、現在は芽も出て順調に育っており、夏に収穫するのが楽しみです！
+省スペースで手軽に始められて、日々の成長を観察する楽しさがあるソロ活です。`,
+    tips: `
+- 栽培用の容器は専用のものを買わなくても、空いたペットボトルや卵パックなどで代用可能です。
+- 藻の発生を防ぐため、ペットボトルなどの透明な容器を使う場合はアルミホイルで周りを覆って遮光しましょう。
+    `.trim(),
   },
   {
     title: "もんじゃ",
-    description: "できたてのもんじゃをヘラで楽しむ、東京下町グルメの定番",
+    description:
+      "東京の下町グルメであるもんじゃ焼きを、鉄板を前に自分のペースで味わいつくす",
     category: Category.GOURMET,
     difficulty: Difficulty.NORMAL,
     budget: Budget.STANDARD,
     imageUrl: "/images/monja.webp",
+    impressions: `関西出身でもんじゃを食べたことがなかったので、もんじゃで有名な月島に行ってきました。
+焼き方が分からなくても店員さんが焼いてくれて、１対１で話すのが少し緊張しましたが話を振ってくれたおかげで緊張が和らぎました。
+一押しはイカ墨チーズもんじゃです。お米が少し入っており洋風リゾットのような味わいでした。
+イカ墨は歯が黒くなるので二人以上だと注文に躊躇いますが、一人だとあまり気にしなくていいので楽です。`,
   },
   {
     title: "コンサート鑑賞",
@@ -153,6 +202,12 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     difficulty: Difficulty.EASY,
     budget: Budget.FREE,
     imageUrl: "/images/walking.webp",
+    impressions: `お金をかけずに気軽にできるソロ活です。
+近所であっても、普段は通らない道をあえて選んで歩いてみると、新しいお店や綺麗な景色などの新鮮な発見があったりします。
+お気に入りの音楽やオーディオブックを聴きながら、自分のペースで気の向くままに歩く時間は、いい気分転換になります。`,
+    tips: `
+- 歩くとのどが渇いて自販機で飲み物を買いがちですが、お気に入りの水筒に好きな飲み物を入れて持っていくと、節約になりテンションもあがります。
+    `.trim(),
   },
   {
     title: "ネットサーフィン",
@@ -163,12 +218,15 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     budget: Budget.FREE,
   },
   {
-    title: "フルーツパーラー巡り",
+    title: "フルーツパーラー",
     description: "旬のみずみずしいフルーツを使ったパフェやジュースを味わう",
     category: Category.GOURMET,
     difficulty: Difficulty.EASY,
     budget: Budget.STANDARD,
     imageUrl: "/images/fruit_parlor.webp",
+    impressions: `フルーツパーラーとは、新鮮な果物を使ったパフェやフルーツサンド、ジュースなどのスイーツや軽食を楽しめる喫茶店のことです。
+季節ごとに旬のフルーツを使ったフェアが開催されている場合も多く、その時期一番の旬のフルーツは非常に甘くて感動する美味しさです。
+`,
   },
   {
     title: "ランプ作り体験",
@@ -197,11 +255,19 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
   },
   {
     title: "フリマアプリ活用",
-    description: "不要なものを売って小遣い稼ぎ 意外と何でも売れます",
+    description: "家にある不用品を売って小遣い稼ぎ 意外と何でも売れます",
     category: Category.INDOOR,
     difficulty: Difficulty.EASY,
     budget: Budget.FREE,
     imageUrl: "/images/accessory.webp",
+    impressions: `使わなくなったモノは捨てずにフリマアプリに出品すると売れるかもしれません。
+服や本はもちろん、トイレットペーパーの芯など意外なものも売れます。
+商品の写真撮影や説明文の作成、梱包などやることは多く最初は面倒ですが、慣れると簡単です。
+家の中がすっきりと片付くだけでなく、臨時収入にもなるので一石二鳥です。`,
+    tips: `
+- 出品する時は、似た商品をアプリ内で検索して売り切れになっている価格帯を参考にすると、高すぎず安すぎない相場ですぐに売れやすくなります。
+- 最近のフリマアプリは、匿名で簡単に発送できるシステムが整っているため、プライバシーを守りながら手軽に利用できます。
+    `.trim(),
   },
   {
     title: "サイゼリヤ",
@@ -209,6 +275,12 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.GOURMET,
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
+    imageUrl: "/images/saizeriya.webp",
+    impressions: `どのメニューを頼んでもハズレがなく、お腹いっぱい食べてもお財布に優しい、安定して満足度の高いコスパ最強レストランです。
+お店によってはカウンター席もあるので一人でも入りやすいです。
+いつも注文するお気に入りのメニューは「ミラノ風ドリア」「コーンクリームスープ」「柔らか青豆の温サラダ」の3点。
+全部でなんと650円（2026年6月時点）。これほどコスパの良い飲食店はありません。
+今度は無料の調味料でメニューのアレンジにも挑戦してみたいです。`,
   },
   {
     title: "メイクレッスン",
@@ -221,11 +293,19 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
   {
     title: "絶景駅",
     description:
-      "改札を出た瞬間に広がる圧倒的な美しさに、ただただ心を奪われる奇跡の空間",
+      "電車を降りた瞬間に広がる圧倒的な美しさに、ただただ心を奪われる奇跡の空間",
     category: Category.REFRESH,
     difficulty: Difficulty.NORMAL,
     budget: Budget.STANDARD,
     imageUrl: "/images/station.webp",
+    impressions: `徒歩0分で素晴らしい絶景を見ることができます。
+神奈川県横浜市にある、海の見える駅として有名なJR鶴見線の海芝浦駅に行きました。
+電車を降りてホームの目の前が海というロケーションで、遠くには横浜ベイブリッジを望むことができます。
+駅構内には公園が併設されており、折り返しの電車が出発するまでの間、ベンチに座りながら海をぼーっと眺める時間は最高に贅沢なひとときです。`,
+    tips: `
+- 海芝浦駅は会社の敷地内にある駅のため、一般の乗客は改札を出ることができません。
+- 電車の本数が少なく、終電の時間帯は早いため、事前に時刻表をしっかりと確認しておきましょう。
+    `.trim(),
   },
   {
     title: "サービスエリア",
@@ -244,6 +324,11 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
     imageUrl: "/images/cake.webp",
+    impressions: `ホットケーキミックスに牛乳・卵・サラダ油といった基本の材料を混ぜて焼くだけで、様々なスイーツが手軽に作れます。
+特にパウンドケーキやスコーンは工程が少なく、チョコやナッツなどの具材で自由にアレンジもできます。`,
+    tips: `
+- YouTubeチャンネル「べるっぱのホットケーキミックス研究所」で、簡単に作れるスイーツがたくさん紹介されているので参考にしてみてほしいです。
+    `.trim(),
   },
   {
     title: "回転寿司",
@@ -261,6 +346,12 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.CULTURE,
     difficulty: Difficulty.NORMAL,
     budget: Budget.FREE,
+    impressions: `敷居が高く見えますが、予約不要・無料で入場可能です。玄関ホールの開廷表ファイルを参考に興味のある裁判を選びます。
+初めて行く場合は、事件の概要が分かりやすい刑事事件の初公判（開廷表に「新件」と記載されたもの）を傍聴するのがおすすめです。
+法廷内は私語厳禁で誰もが裁判の行方に集中しているため、一人で席に座っていても周囲の目は全く気になりません。`,
+    tips: `
+- 土日祝は休庁のため、平日の開廷時間内に足を運ぶ必要があります。
+- 裁判所の敷地内および法廷内での写真動画撮影、録音は一切禁止されています。（紙のメモはOK）`,
   },
   {
     title: "川下り",
@@ -313,6 +404,10 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     difficulty: Difficulty.NORMAL,
     budget: Budget.LIGHT,
     imageUrl: "/images/fishing.webp",
+    impressions: `日々の忙しさから少し離れたいなと思い、癒しを求めてレトロな雰囲気の金魚釣り堀へ行ってみました。
+お金を払って釣り竿と餌をもらい、池の周りにある椅子に座ります。
+最初は音沙汰なしでしたが、常連っぽい人の動きを真似て竿を揺らしてみると綺麗な金魚がピチピチと釣れました。
+ただ浮きの動きだけに集中したり、釣れた金魚の泳ぐ姿を観察する時間は、驚くほど心が静まり、最高の癒やしになりました。`,
   },
   {
     title: "会話禁止カフェ",
@@ -322,6 +417,13 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     difficulty: Difficulty.NORMAL,
     budget: Budget.LIGHT,
     imageUrl: "/images/book_cafe.webp",
+    impressions: `心が疲れたときに、ぜひ立ち寄ってみてほしい場所です。
+店内は一人専用の仕切り席が多く、注文以外の会話は禁止されているため、周囲を気にせずほっと落ち着けます。
+本をめくる音や水槽の水音に耳をすませながら静寂な空間に浸ったり、各席のノートに綴られた他のお客さんの日記や悩みに共感したり。
+ドリンク1杯あたりの滞在時間が決まっているお店も多く、誰にも気を使うことなく、安心して一人の時間を満喫できます。`,
+    tips: `
+- お店ごとに独自のルールが多いため、事前にSNSや公式サイトでチェックしておくとよいです。
+`,
   },
   {
     title: "資格の勉強",
@@ -339,6 +441,12 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
     imageUrl: "/images/parfait2.webp",
+    impressions: `「夜パフェ（シメパフェ）」とは、札幌を中心に、はしご酒の後にパフェを食べるという文化が発祥です。
+店内はバーのような落ち着いた雰囲気で、繊細なデザインの焼き菓子やアルコールの効いたソルベが使われたパフェが多く、甘すぎない大人な味わいが魅力です。
+お酒を飲んだ後ではなくても、仕事帰りに疲れたときのご褒美としてパフェを食べるのはどうでしょう。`,
+    tips: `
+- 開店してすぐ（17〜18時頃）の時間帯だと比較的空いています。
+`,
   },
   {
     title: "パン作り体験",
@@ -365,9 +473,15 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     difficulty: Difficulty.EASY,
     budget: Budget.FREE,
     imageUrl: "/images/notebook.webp",
+    impressions: `今後やりたい仕事は何なのか悩んでいたときに、『世界一やさしい「やりたいこと」の見つけ方 人生のモヤモヤから解放される自己理解メソッド』（八木 仁平:著）という本に出会いました。
+本に書かれている質問に答える形で、自分の「大事なこと（価値観）」「得意なこと（才能）」「好きなこと（情熱）」をノートに書き出していくと、頭の中のモヤモヤがすっきりと整理されていきます。
+やりたいことがない場合は「やりたくないこと・嫌いなこと」を書き出すのもいいですよ。`,
+    tips: `
+- 綺麗に書こうとせず、思い浮かんだ言葉をそのままなぐり書きするくらいの方が、自分の本当の気持ちを引き出しやすいです。
+`,
   },
   {
-    title: "物産展巡り",
+    title: "物産展",
     description:
       "現地でしか買えないレアなお土産や未知の味に出会える、活気あふれる会場をマイペースに回る気ままな宝探し",
     category: Category.GOURMET,
@@ -377,11 +491,18 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
   {
     title: "造幣局見学",
     description:
-      "普段使っている500円玉などの貨幣が作られる舞台裏へ。圧倒的な最新技術をのぞき見する大人の社会科見学",
+      "普段使っている500円玉などの貨幣が作られる舞台裏へ。圧倒的な技術をのぞき見する大人の社会科見学",
     category: Category.CULTURE,
     difficulty: Difficulty.HARD,
     budget: Budget.FREE,
     imageUrl: "/images/mint.webp",
+    impressions: `造幣局とは貨幣（1円〜500円玉）や金属工芸品などを製造している日本の行政執行法人のことで、大阪市に本局、さいたま市と広島市に支局があります。
+併設の博物館では古銭や勲章の展示を見ることができ、さらに事前申し込みが必要ですが無料で工場見学も行っており、貨幣の製造工程が見られます。
+他にも個人的におすすめなのが4月に開催される大阪本局の桜の通り抜け。140品種331本の桜が咲き誇り圧巻の景色です。`,
+    tips: `
+- 工場見学は平日しか実施していないので注意
+- 桜の通り抜け期間中、大阪本局は休館日となります
+`,
   },
   {
     title: "海外旅行",
@@ -407,6 +528,10 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.INDOOR,
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
+    impressions: `たこ焼き器や具材の用意は少し手間がかかりますが、焼くのは意外と簡単。
+タコやネギなどの定番具材以外にはキムチやチーズもおすすめです。ソースマヨに飽きたら味変で出汁で食べると飽きないです。
+余っても冷凍できるので、たくさん作っても大丈夫です。
+誰の目も気にせず、焼き立て熱々のたこ焼きを頬張り炭酸ジュースで流し込むのが至高です。`,
   },
   {
     title: "焼肉ライク",
@@ -455,24 +580,37 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.INDOOR,
     difficulty: Difficulty.NORMAL,
     budget: Budget.LUXURY,
+    impressions: `自分の部屋をもっと居心地の良い場所にしたいと思い立ち、自宅のスマートホーム化に挑戦しました。
+最初は設定が難しそうに思えましたが、スマホのアプリに従ってデバイスを連携させていくだけで、簡単に導入することができました。
+電気の消灯スケジュールを設定しておけば、寝落ちしても自動で電気が消えてくれたり、帰宅前にアプリからエアコンを付けることで、帰ってきたときに部屋を快適な温度にしておくことができるなど、日々のQOLが非常に上がりました。
+`,
   },
   {
-    title: "季節限定のお菓子を味わう",
+    title: "季節限定スイーツを味わう",
     description:
       "春の桜味、夏のチョコミント、秋のさつまいもなど...味覚で季節の移り変わりを楽しむ",
     category: Category.GOURMET,
     difficulty: Difficulty.EASY,
     budget: Budget.LIGHT,
-    imageUrl: "/images/chocolate_mint.webp",
+    imageUrl: "/images/chocolate_mint2.webp",
+    impressions: `私は季節限定スイーツが好きで、お菓子が販売される時期が近づくとSNSでチェックしています。
+特にチョコミントには目がなく、6月頃になるとコンビニや無印良品で販売されるスイーツを買い占めたり、ファミレスやカフェのチョコミントフェアのメニューを楽しんだりしています。`,
   },
   {
     title: "同人誌即売会",
     description:
-      "商業誌では絶対に読めない、ニッチで濃すぎる専門知識の宝庫。見本誌を自分のペースでペラペラとめくりながら、未知の教養と出会う知的宝探し",
+      "日本最大級の同人誌即売会に足を運び、熱気あふれる会場で一般の書店にはないディープな同人誌を探す",
     category: Category.CULTURE,
-    difficulty: Difficulty.NORMAL,
+    difficulty: Difficulty.HARD,
     budget: Budget.STANDARD,
     imageUrl: "/images/bigsight.webp",
+    impressions: `個人が自由に作った同人誌が集まる日本最大級のイベント、コミケにはいつも参加しています。
+なかでも評論系（趣味や仕事など幅広い知識が集まる分野）というジャンルが好きで、いつも料理や旅行、面白い体験談などの同人誌を買うことが多いです。
+商業誌では絶対に読めないような、個人の並々ならぬ情熱やニッチなこだわりが凝縮された一冊に出会えます。`,
+    tips: `
+- コミケは8月と12月に開催されるため、熱中症対策や防寒対策などの服装・体調管理は万全にして臨むことが大切です。
+- お目当てのサークルをスムーズに回れるよう、事前にWebカタログなどで配置図を確認し、現金を多めに用意していくとよいです。
+`,
   },
   {
     title: "はとバス",
@@ -614,6 +752,13 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.REFRESH,
     difficulty: Difficulty.HARD,
     budget: Budget.LIGHT,
+    impressions: `少し目立つので万人にはおすすめできませんが、やってみると割と楽しいので入れてみました。
+風が強い日には驚くほど空高くまで上がるので、青空を見上げながら凧を操作するだけで良いリフレッシュになります。
+`,
+    tips: `
+- 必ず木や電線、遮るもののない十分な広さがある芝生広場や河川敷で遊ぶようにしましょう。
+- 通販で安価な凧が手に入るため気軽に始められます。
+`,
   },
   {
     title: "おうち縁日",
@@ -631,6 +776,10 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     difficulty: Difficulty.NORMAL,
     budget: Budget.LIGHT,
     imageUrl: "/images/brooch.webp",
+    impressions: `なにかクリエイティブなことがしたいけど不器用でセンスもないので、ビーズ刺繍のブローチキットを購入しました。
+説明書通りにビーズを一つひとつ縫い付けていくだけで、想像以上にいい作品が出来上がっていく過程がとても楽しいです。
+パーツや色合わせが最初から決まっているキットなら、初心者でも迷わず安心して進められます。
+縫うのに没頭しているうちに時間が経つのを忘れてしまい、自分で作ったブローチには特別な愛着が湧きました。`,
   },
   {
     title: "お菓子の工場直売所",
@@ -657,6 +806,11 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     difficulty: Difficulty.NORMAL,
     budget: Budget.LIGHT,
     imageUrl: "/images/purin.webp",
+    impressions: `ニードルフェルトは、ふわふわの羊毛を専用の針で刺して形を作っていく手芸のことです。
+小さなマスコットを作る場合は市販のキットを購入すれば材料を揃えるのも簡単で、私はサンリオの某キャラのキットを購入して挑戦しました。
+最初は慣れていないので手に針を刺してしまう失敗もありつつ、なんとか完成。
+見本と比べて顔のパーツが歪んでいたり足が大きくなってしまったりしましたが、自分で時間をかけて作ったからこそ愛着がわいてきます。
+黙々と針を刺す作業に没頭できるので、デジタルデトックスにもなります。`,
   },
   {
     title: "生成AIの活用",
@@ -665,6 +819,7 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     category: Category.INDOOR,
     difficulty: Difficulty.EASY,
     budget: Budget.FREE,
+    imageUrl: "/images/gemini.webp",
   },
   {
     title: "スケート",
@@ -700,6 +855,9 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     difficulty: Difficulty.NORMAL,
     budget: Budget.LIGHT,
     imageUrl: "/images/okashi_house.webp",
+    impressions: `昔絵本で見たお菓子の家が印象に残っていて、自分も作ってみたいなと思い、森永の公式レシピを参考に作ってみました。
+溶かしたチョコを接着剤にしてビスケットで壁、チョコ菓子で屋根を組み立てていき、最後に金平糖やラムネでデコレーションしました。
+見た目も可愛く、味も市販のお菓子を使っているので美味かったです。`,
   },
   {
     title: "カルディでプチ贅沢",
@@ -815,5 +973,45 @@ export const initialSoloKatsuData: Prisma.SoloKatsuCreateInput[] = [
     difficulty: Difficulty.EASY,
     budget: Budget.STANDARD,
     imageUrl: "/images/chocolate.webp",
+  },
+  {
+    title: "凝った料理づくり",
+    description:
+      "休日のまとまった時間を使い、普段は作らない手間の要るメニューを自分のためだけに作る",
+    category: Category.GOURMET,
+    difficulty: Difficulty.NORMAL,
+    budget: Budget.STANDARD,
+    imageUrl: "/images/liver_paste.webp",
+    impressions: `休日にじっくり時間をかけて料理を作り、自分自身へのおもてなしをするのはいかがでしょうか。
+最近貧血気味だったので、鉄分豊富なレバーペーストを作ってみました。レバーとハツを切り分け、玉ねぎとハーブで炒め、生クリームやバターとミキサーで混ぜて……といった数々の工程を実施し、ついに完成。
+バゲットにたっぷり付けていただきました。お金も時間もかかりましたが、お店クオリティの味に仕上がり、美味しかったので作ったかいがありました。`,
+  },
+  {
+    title: "採石場跡",
+    description:
+      "かつての巨大な地下採石場に広がる、まるで異世界や古代遺跡のような幻想的な空間を巡る",
+    category: Category.CULTURE,
+    difficulty: Difficulty.NORMAL,
+    budget: Budget.STANDARD,
+    imageUrl: "/images/oya.webp",
+    impressions: `YouTubeの旅動画で見て気になっていた、栃木県宇都宮市にある大谷資料館に行きました。
+ここはかつて大谷石を掘り出していた地下採石場の跡地で、野球場1つが入ってしまうほどの広大な空間が広がっています。
+館内にはアートも飾られており、ライトアップされた光景は非常に幻想的でした。
+帰りに宇都宮餃子とビールを味わうのもいいですよ。`,
+    tips: `
+- 館内の平均気温は年間を通して10度くらいしかなく夏でも冷え込むため、上着を持参しましょう。
+- 階段が多い場所なので、歩き慣れたスニーカーで行くのがおすすめです。
+    `.trim(),
+  },
+  {
+    title: "Google Mapで行きたい場所リストを作る",
+    description: "ネットやSNSで見かけた気になるスポットをGoogle Mapにピン留め",
+    category: Category.INDOOR,
+    difficulty: Difficulty.EASY,
+    budget: Budget.FREE,
+    impressions: `いつか行ってみたいお店やSNSで見かけた絶景スポットを忘れないように、Googleマップにリスト化しています。
+これまではSNSのブックマークで保存したりスクショを撮ったまま埋もれてしまったりしていましたが、マップ上に一覧で可視化されると一気にワクワク感が増します。
+「気になる喫茶店」「次の旅行先の観光スポット」などとアイコンを色分けして整理していく作業自体が楽しく、まるで自分専用のガイドブックを作っているような気分です。
+ふと一人の時間ができたときも、このマップを開けば「ここから一番近い行きたい場所」がすぐに見つかるので、休日のお出かけのフットワークが軽くなりました。`,
   },
 ];
