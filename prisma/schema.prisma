@@ -51,4 +51,6 @@ model SoloKatsu {
   imageUrl    String?
   createdAt   DateTime   @default(now())
   updatedAt   DateTime   @updatedAt
+  impressions String?
+  tips        String?
 }
