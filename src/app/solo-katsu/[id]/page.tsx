@@ -1,9 +1,10 @@
+import ReactMarkdown from "react-markdown";
 import CategoryBadge from "@/components/soloKatsu/CategoryBadge";
 import { DifficultyStars } from "@/components/soloKatsu/DifficultyStars";
 import { getSoloKatsuDetail } from "@/lib/soloKatsu";
 import { formatBudget } from "@/utils/soloKatsu";
 import { SoloKatsu } from "@prisma/client";
-import { ArrowLeft, Flame, Wallet, Sparkle } from "lucide-react";
+import { ArrowLeft, Flame, Lightbulb, NotebookPen, Wallet } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,6 +32,9 @@ export default async function SoloKatsuDetailPage({ params }: Params) {
   if (!soloKatsu) {
     notFound();
   }
+
+  const markdownClass =
+    "space-y-2 text-sm leading-relaxed text-[var(--color-sk-muted)] [&>ul]:list-disc [&>ul]:pl-5 [&>ol]:list-decimal [&>ol]:pl-5 [&>strong]:font-bold [&>strong]:text-[var(--color-sk-text)] [&>p]:mb-2 [&>h4]:font-bold [&>h4]:text-base [&>h4]:text-[var(--color-sk-text)] [&>h4]:mt-3";
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8 text-sk-text">
@@ -68,9 +72,15 @@ export default async function SoloKatsuDetailPage({ params }: Params) {
           </div>
 
           {/* タイトル */}
-          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-6 leading-tight text-sk-text">
-            {soloKatsu.title}
-          </h1>
+          <div className="mb-8">
+            <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2 leading-tight text-sk-text">
+              {soloKatsu.title}
+            </h1>
+            {/* 説明文 */}
+            <p className="text-base leading-relaxed text-sk-muted whitespace-pre-wrap">
+              {soloKatsu.description}
+            </p>
+          </div>
 
           {/* スペックダッシュボード（難易度 & 予算） */}
           <div className="grid grid-cols-2 gap-4 bg-sk-bg/30 mb-8">
@@ -95,15 +105,32 @@ export default async function SoloKatsuDetailPage({ params }: Params) {
             </div>
           </div>
 
-          <div className="prose prose-sk max-w-none">
-            <h2 className="text-lg font-bold mb-3 border-b border-sk-text/10 pb-2 flex item-center items-center gap-2">
-              <Sparkle className="w-5 h-5 text-sk-primary" />
-              このソロ活の楽しみ方
-            </h2>
-            <p className="text-base leading-relaxed text-sk-muted whitespace-pre-wrap">
-              {soloKatsu.description}
-            </p>
-          </div>
+          {/* 感想 */}
+          {soloKatsu.impressions && (
+            <div className="bg-sk-tertiary/30 rounded-2xl p-6 mb-8">
+              <div className="flex items-center gap-1 mb-3">
+                <NotebookPen className="w-4 h-4 text-sk-text" />
+                <h3 className="text-lg font-bold text-sk-text">
+                  ソロ活のきろく
+                </h3>
+              </div>
+              <div className={markdownClass}>
+                <ReactMarkdown>{soloKatsu.impressions}</ReactMarkdown>
+              </div>
+            </div>
+          )}
+          {/* Tips */}
+          {soloKatsu.tips && (
+            <div className="bg-sk-bg rounded-2xl p-6 border-2 border-dashed border-sk-primary relative overflow-hidden">
+              <div className="flex items-center gap-1 mb-3">
+                <Lightbulb className="w-4 h-4 text-sk-primary" />
+                <h3 className="text-lg font-bold text-sk-text">Tips</h3>
+              </div>
+              <div className={markdownClass}>
+                <ReactMarkdown>{soloKatsu.tips}</ReactMarkdown>
+              </div>
+            </div>
+          )}
         </div>
       </article>
     </div>
